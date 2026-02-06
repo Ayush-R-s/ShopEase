@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary: #6366f1;
+        --secondary: #ec4899;
+        --bg-dark: #0f172a;
+        --glass: rgba(255, 255, 255, 0.05);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+    }
+
+    body {
+        @apply bg-gradient-premium min-h-screen text-slate-50;
+        margin: 0;
+        font-family: 'Inter', system-ui, sans-serif;
+    }
+}
+
+@layer components {
+    .glass-card {
+        @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20;
+    }
+
+    .btn-primary {
+        @apply bg-gradient-to-br from-indigo-500 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:brightness-110 hover:shadow-lg hover:shadow-indigo-500/40 active:scale-95 flex items-center justify-center gap-2;
+    }
+
+    .nav-item {
+        @apply flex items-center gap-2 font-medium transition-colors duration-300 hover:text-indigo-400;
+    }
+}
